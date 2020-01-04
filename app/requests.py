@@ -1,5 +1,5 @@
 from app import app
-from .models import Articles, News
+from app.models.news import Articles, News
 import requests
 
 # Getting api key
@@ -8,8 +8,9 @@ api_key = app.config["NEWS_API_KEY"]
 # Getting the news base url
 base_url = app.config["NEWS_API_BASE_URL"]
 
-#Getting the articles base url
+# Getting the articles base url
 article_base_url = app.config["ARTICLE_API_BASE_URL"]
+
 
 def get_sources():
     '''
@@ -25,7 +26,8 @@ def get_sources():
         news_results = process_results(news_results_list)
 
         return news_results
-    
+
+
 def process_results(news_results_list):
     news_results = []
     for news_item in news_results_list:
@@ -43,6 +45,9 @@ def process_results(news_results_list):
                             category, language, country)
             news_results.append(news_obj)
     return news_results
+
+# get articles
+
 
 def get_articles(id):
     get_articles_url = article_base_url.format(id, api_key)
