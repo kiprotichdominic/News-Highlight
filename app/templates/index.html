@@ -1,1 +1,15 @@
-<h1> Hello World </h1>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%} 
+
+<!-- styles block -->
+{% block styles%}
+<link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="bg-info mb-3 container">
+  <div class="row">
+    {{macro.displayNews(news_source)}}
+  </div>
+</div>
+{% endblock%}

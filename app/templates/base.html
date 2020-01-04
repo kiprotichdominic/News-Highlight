@@ -6,7 +6,7 @@
     <title>{{ title }}</title>
     {% else %}
     <title>Welcome to the best News Highlight website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     {% endif %}
   </head>
   <body>
