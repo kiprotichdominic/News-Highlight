@@ -5,9 +5,8 @@
 {% block styles%}
 <link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
 {% endblock %}
-
 {% block content %}
-<div class="bg-info mb-3 container">
+<div class=" mb-3 container">
   <div class="row">
     {{macro.displayNews(news_source)}}
   </div>
