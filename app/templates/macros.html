@@ -2,12 +2,13 @@
 <!-- styles block -->
 {% block styles%}
 <link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='./css/main.css')}}">
 {% endblock %}
  {% for result in news_results %}
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="card m-2">
+      <div class="card m-2 shadow">
         <div class="card-header text-center">
           <h3>{{result.name }}</h3>
         </div>
