@@ -1,8 +1,9 @@
-{% macro displayNews(news_results) %}
-{% block styles%}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-{% endblock %}
-{% for result in news_results %}
+{% macro displayNews(news_results) %} {% block styles%}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+/>
+{% endblock %} {% for result in news_results %}
 <div class="col-md-12">
   <div class="card m-2">
     <div class="card-header text-center">
@@ -11,21 +12,14 @@
     <div class="card-body">
       <p class="description">{{result.description|truncate(150)}}</p>
     </div>
-    <div class="text-center">
-      <a
-        class="btn btn-primary"
-        href="/articles/{{result.id}}"
-      >
-        Read more</a
-      >
+    <div class="text-center mb-2">
+      <a class="btn btn-primary" href="/articles/{{result.id}}"> Read more</a>
     </div>
   </div>
 </div>
 
-{% endfor %}
-{% endmacro %} 
-{% macro Article(article_result) %} 
-{% for arts in article_result %}
+{% endfor %} {% endmacro %} {% macro Article(article_result) %} {% for arts in
+article_result %}
 <div class="col-md-12 mt-10">
   <div class="card m-3">
     <img class="card-img-top " src="{{arts.urlToImage}}" alt="{{arts.name}}" />
@@ -33,14 +27,12 @@
       <h4 class="card-title">Author: {{arts.author}}</h4>
       <p class="card-text">{{arts.description |truncate(200)}}</p>
       <div class="card-header">Published on: {{arts.publishedAt}}</div>
-      <a
-        href="{{arts.url}}"
-        target="_blank"
-        class="btn btn-success stretched-link"
-        >Read more....</a
-      >
+      <div class="text-center">
+        <a href="{{arts.url}}" target="_blank" class="btn btn-info m-1"
+          >Read more....</a
+        >
+      </div>
     </div>
   </div>
 </div>
-{% endfor %} 
-{% endmacro %}
+{% endfor %} {% endmacro %}
