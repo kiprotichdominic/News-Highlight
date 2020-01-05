@@ -23,18 +23,29 @@
 
 {% endfor %} {% endmacro %} {% macro Article(article_result) %} {% for arts in
 article_result %}
-<div class="col-md-12 mt-10">
-  <div class="card m-3">
-    <img class="card-img-top " src="{{arts.urlToImage}}" alt="{{arts.name}}" />
+<div class="col-md-12 m-3">
+  <div class="card text-center">
+    <div class="card-header">
+      {{arts.title}}
+    </div>
     <div class="card-body">
-      <h4 class="card-title">Author: {{arts.author}}</h4>
-      <p class="card-text">{{arts.description |truncate(200)}}</p>
-      <div class="card-header">Published on: {{arts.publishedAt}}</div>
-      <div class="text-center">
-        <a href="{{arts.url}}" target="_blank" class="btn btn-info m-1"
-          >Read more....</a
-        >
+      <div class="row">
+        <div class="col-md-5">
+          <img
+            class="card-img-top "
+            src="{{arts.urlToImage}}"
+            alt="{{arts.name}}"
+          />
+        </div>
+        <div class="col-md-7">
+          <div class="card-text">Published on: {{arts.publishedAt}}</div>
+          <p class="card-text">{{arts.description |truncate(200)}}</p>
+        </div>
       </div>
+      <a href="{{arts.url}}" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
     </div>
   </div>
 </div>
