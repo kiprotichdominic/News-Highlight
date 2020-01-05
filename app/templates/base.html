@@ -14,9 +14,15 @@
   </head>
   <body>
     <!-- Navbar block  -->
-    {% block navbar %} {% include 'navbar.html' %} {% endblock %}
+    {% block navbar %} 
+    {% include 'navbar.html' %} 
+    {% endblock %}
     <!-- Content block -->
     {% block content %} {% endblock%}
+        <!-- Footer block  -->
+        {% block footer %} 
+        {% include 'footer.html' %} 
+        {% endblock %}
     <script src="{{url_for('static', filename='js/jquery-3.4.1.slim.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/popper.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
