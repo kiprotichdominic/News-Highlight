@@ -6,12 +6,19 @@
     <title>{{ title }}</title>
     {% else %}
     <title>Welcome to the best News Highlight website</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/bootstrap.min.css')}}"
+    />
     {% endif %}
   </head>
   <body>
+    <!-- Navbar block  -->
+    {% block navbar %} {% include 'navbar.html' %} {% endblock %}
     <!-- Content block -->
-
     {% block content %} {% endblock%}
+    <script src="{{url_for('static', filename='js/jquery-3.4.1.slim.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
   </body>
 </html>

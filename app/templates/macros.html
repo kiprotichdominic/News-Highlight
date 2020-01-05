@@ -10,7 +10,10 @@
       <h3>{{result.name }}</h3>
     </div>
     <div class="card-body">
+      <p class="text-center font-weight-bold">Descriprion</p>
       <p class="description">{{result.description|truncate(150)}}</p>
+      <p class="text-center font-weight-bold">Category</p>
+      <p class="description">{{result.category}}</p>
     </div>
     <div class="text-center mb-2">
       <a class="btn btn-primary" href="/articles/{{result.id}}"> Read more</a>
