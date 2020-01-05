@@ -5,7 +5,7 @@
 />
 {% endblock %} {% for result in news_results %}
 <div class="col-md-12">
-  <div class="card m-2">
+  <div class="card m-2 shadow">
     <div class="card-header text-center">
       <h3>{{result.name }}</h3>
     </div>
@@ -20,8 +20,9 @@
     </div>
   </div>
 </div>
-
-{% endfor %} {% endmacro %} {% macro Article(article_result) %} {% for arts in
+{% endfor %} 
+{% endmacro %} 
+{% macro Article(article_result) %} {% for arts in
 article_result %}
 <div class="col-md-12 m-3">
   <div class="card text-center">
@@ -34,18 +35,17 @@ article_result %}
           <img
             class="card-img-top "
             src="{{arts.urlToImage}}"
-            alt="{{arts.name}}"
+            alt="{{arts.title}}"
           />
         </div>
         <div class="col-md-7">
-          <div class="card-text">Published on: {{arts.publishedAt}}</div>
           <p class="card-text">{{arts.description |truncate(200)}}</p>
         </div>
       </div>
-      <a href="{{arts.url}}" class="btn btn-primary">Go somewhere</a>
+      <a href="{{arts.url}}" class="btn btn-primary">Read More</a>
     </div>
     <div class="card-footer text-muted">
-      2 days ago
+      Published By: {{arts.author}}
     </div>
   </div>
 </div>
