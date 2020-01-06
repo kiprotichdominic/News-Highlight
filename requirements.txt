@@ -76,7 +76,7 @@ parso==0.5.1
 pep8==1.7.1
 pexpect==4.6.0
 pickleshare==0.7.5
-Pillow==6.1.0
+Pillow==6.2.0
 pipenv==11.9.0
 progressbar==2.5
 prompt-toolkit==1.0.15
