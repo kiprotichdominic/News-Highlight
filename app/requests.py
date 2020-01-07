@@ -1,6 +1,7 @@
 from app import app
-from app.models.news import Articles, News
-import requests
+from .models import Articles, News
+from pip._vendor import requests
+# import requests
 
 # Getting api key
 api_key = app.config["NEWS_API_KEY"]
