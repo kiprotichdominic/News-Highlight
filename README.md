@@ -33,6 +33,6 @@ This is an application that help people view different articles and news from di
 
 ### License
 
-[![License: MIT](LICENCE)](https://opensource.org/licenses/MIT)
+[![License: MIT]([LICENCE](https://opensource.org/licenses/MIT))](LICENCE)
 MIT License
 Copyright (c) 2020
